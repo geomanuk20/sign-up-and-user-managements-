@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit user (<%= user.name %>)</h1>
+        <button style="float: right;"><a href="/">home</a></button>
+        <form action="/update/<%= user._id  %>" method="post" id="add-form" enctype="multipart/form-data">
+            <div id="div3" class="form-group">
+                <label id="div3"  for="name">Username:</label>
+                <input  type="text"  class="form-control" id="name"  name="name" placeholder="username" value="<%= user.name %>" required minlength="3">
+              </div>
+              <div id="div3" class="form-group">
+               <label id="div3" for="password">Password:</label>
+                <input id="div3" type="password" class="form-control" id="password" name="password" placeholder="password"value="<%= user.password %>"  required minlength="1">
+              </div>
+              <button type="submit" class="btn btn-success " value="update user" id="log" action="">update user</button>
+        </form>
+    </div>
+</body>
+</html>

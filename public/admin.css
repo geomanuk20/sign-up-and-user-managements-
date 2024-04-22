@@ -1,0 +1,35 @@
+body{
+    /*background-color:rgb(120, 104, 104);*/
+     padding: 50px;
+     background-image: url('/public/j.jpg');
+     background-size: cover;
+     background-position: center;
+     /*padding: 10px 8%;
+     position: relative;*/
+ } 
+ .container{
+    max-width: 400px;
+
+}
+ /*login*/
+ #div1{
+    width: 500px;
+    height: 350px;
+    border: 2px solid darkgray;
+    background-color: transparent;
+    border-radius: 5px;
+}
+#div5{
+   width:500px;
+   height:500px;
+   background-color: white;
+}
+#div2{
+    width: 800px;
+    height: 500px;
+    border: 2px solid cornsilk;
+    background-color: burlywood;
+}
+#div3{
+    color: white;
+}

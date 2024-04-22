@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.datatables.net/v/bs5/dt-2.0.3/datatables.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>home page</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <nav>
+        <li class="nav-item active">
+            <a class="nav-item active" href="/add"><button >add user</button></a>
+            <a href="/admin"><button>logout</button></a>
+            <br>
+            <div class="table-responsive">
+                <% if (user && user.length > 0) { %>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="table-dark-black" style="background-color: gray;">
+                                <th>id</th>
+                                <th>name</th>
+                                <th>password</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <% user.forEach((row,index) => { %>
+                            <tr>
+                                <td><%= index %></td>
+                                <td><%= row.name %></td>
+                                <td><%= row.password %></td>
+                                <td>
+                                    <a href="/edit/<%= row._id %>" class="text-sucess"><i class="fas fa-edit fa-lg mx-1"></i></a>
+                                    
+                                    <a href="/delete/<%= row._id %>" class="text-danger"><i class="fas fa-trash fa-lg mx-1"></i></a>
+
+                                   
+                                </td>
+                            </tr>
+                          <% }); %>
+                        </tbody>
+                    </table>
+                <% } else { %>
+                    <h1 class="text_center text-secondary mt-5">no user found in the database</h1>
+                    <% } %>
+            </div>
+        </li>
+    </nav>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.datatables.net/v/bs5/dt-2.0.3/datatables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("table").DataTable({
+            order:[0, 'desc']
+        })
+    })
+</script>
+</html>

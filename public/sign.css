@@ -1,0 +1,33 @@
+body{
+    /*background-color:rgb(120, 104, 104);*/
+     padding: 50px;
+     background-image: url('/public/R.jpg');
+     background-size: cover;
+     background-position:top;
+     /*padding: 10px 8%;
+     position: relative;*/
+ }
+ 
+ .container{
+     max-width: 400px;
+ 
+ }
+ /*signup*/
+#div4{
+    width: 4500px;
+    height: 500px;
+    border: 1px solid ghostwhite;
+    background-color:lightgray;
+    border-radius: 15px;
+    float:right;
+   
+}
+#div2{
+    width: 800px;
+    height: 500px;
+    border: 2px solid cornsilk;
+    background-color: burlywood;
+}
+h1{
+    text-align: center;
+}

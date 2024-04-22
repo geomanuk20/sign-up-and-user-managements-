@@ -1,0 +1,53 @@
+body{
+    /*background-color:rgb(120, 104, 104);*/
+     padding: 50px;
+     background-image: url('/public/wp2939900.jpg');
+     background-size: cover;
+     background-position: center;
+     /*padding: 10px 8%;
+     position: relative;*/
+ } 
+ .container{
+     max-width: 400px;
+ 
+ }
+ /*signup*/
+#div4{
+    width: 500px;
+    height: 350px;
+    border: 2px solid gray;
+    background-color:transparent;
+    background-image: url(/public/R.jpg);
+    border-radius: 5px;
+}
+/*login*/
+ #div1{
+     width: 500px;
+     height: 350px;
+     border: 2px solid gray;
+     background-color:transparent;
+     background-image: url(/public/wp2939900.jpg);
+     border-radius: 5px;
+ }
+ #div5{
+    width:500px;
+    height:500px;
+    background-color: white;
+ }
+ #div2{
+     width: 800px;
+     height: 500px;
+     border: 2px solid cornsilk;
+     background-color: burlywood;
+ }
+ #div3{
+     color: white;
+ }
+ .logout{
+     float:right;
+     margin-top: 25px;
+ }
+ #dark{
+     float: right;
+     background-color: white;
+ }
